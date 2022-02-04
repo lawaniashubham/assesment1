@@ -1,0 +1,110 @@
+\\ASSESMENT - 1
+
+
+
+package com.a.main;
+
+import java.util.Scanner;
+
+
+public class Explore
+{
+public static void main(String[] args)
+{
+	
+	
+	
+//variable Declaration	
+int len_string,len_string1,index = 0,index1=1,i,char_count=1;
+String ArrayElements[] = new String[100];
+String char_,x,last_ele;
+
+
+
+
+//input 
+Scanner sc = new Scanner(System.in);
+
+
+
+
+//INPUT - len array, all characters
+
+System.out.print("Number of Character You want to Enter");
+len_string = sc.nextInt();
+len_string1 = len_string;
+//sc.next();
+
+while (len_string > -1)
+{   
+//System.out.print("Enter the ch");
+char_ = sc.nextLine();
+ArrayElements[index] = char_;
+index += 1;
+len_string -= 1;
+}
+
+//printing the input array of char
+System.out.println();
+
+
+
+
+
+//
+System.out.print(ArrayElements);
+//System.out.println("\n");
+
+
+//sort
+//Arrays.sort(ArrayElements,0,3);
+
+/*
+for (i = 0; i < len_string1+1 ; i++)
+{
+	// accessing each element of array
+    x = ArrayElements[i];
+    System.out.print(x + " ");
+   
+}
+*/
+
+
+//sorted
+
+
+//
+
+
+
+
+// (PRINT) occurance print
+
+System.out.println("=========output time======");
+System.out.println(ArrayElements[0]);
+last_ele = ArrayElements[0];
+while (index1 < len_string1) 
+{
+	if (last_ele != ArrayElements[index1])
+	{
+		System.out.println(last_ele+ " : "+char_count);
+		last_ele = ArrayElements[index1];
+		
+	}
+	
+	else 
+	{
+		char_count += 1;
+	}
+	
+	index1 += 1;
+	
+}
+
+
+
+}
+
+
+
+}
